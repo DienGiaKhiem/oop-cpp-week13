@@ -84,7 +84,7 @@ int main() {
     Student s2("935898420", "Tran Thi Thu ha", "HCMC", "B12345", 2020);
 
     FIEstudents f1;
-    FIEstudents f2("45678901234567", "Le Thi D", "Da Nang", "C67890", 2021, 90);
+    FIEstudents f2("45678901234567", "DUNGSENPAI", "Da Nang", "C67890", 2021, 90);
 
     cout << "=== THONG TIN DOI TUONG f1 ===" << endl;
     f1.displayInfo();
