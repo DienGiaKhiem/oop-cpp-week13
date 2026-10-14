@@ -86,9 +86,9 @@ int main() {
     FIEstudents f1;
     FIEstudents f2("45678901234567", "Le Thi D", "Da Nang", "C67890", 2021, 90);
 
-    cout << "=== Thông tin đối tượng f1 ===" << endl;
+    cout << "=== THONG TIN DOI TUONG f1 ===" << endl;
     f1.displayInfo();
-    cout << "=== Thông tin đối tượng f2 ===" << endl;
+    cout << "=== THONG TIN DOI TUONG f2 ===" << endl;
     f2.displayInfo();
 
     return 0;
