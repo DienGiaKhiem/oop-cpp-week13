@@ -1,6 +1,6 @@
-
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -68,8 +68,8 @@ public:
     void displayInfo() const {
         Employee::displayInfo();
         cout << "So gio lam viec: " << soGioLamViec << endl;
-        cout << "Don gia: " << donGia << endl;
-        cout << "Luong: " << tinhLuong() << endl;
+        cout << "Don gia: " << fixed << setprecision(0) << donGia << endl;
+        cout << "Luong: " << fixed << setprecision(0) << tinhLuong() << endl;
     }
 };
 
@@ -108,10 +108,10 @@ public:
 
     void displayInfo() const {
         Employee::displayInfo();
-        cout << "Luong co ban: " << luongCoBan << endl;
-        cout << "Phu cap: " << phuCap << endl;
-        cout << "He so thuong: " << heSoThuong << endl;
-        cout << "Luong: " << tinhLuong() << endl;
+        cout << "Luong co ban: " << fixed << setprecision(0) << luongCoBan << endl;
+        cout << "Phu cap: " << fixed << setprecision(0) << phuCap << endl;
+        cout << "He so thuong: " << fixed << setprecision(1) << heSoThuong << endl;
+        cout << "Luong: " << fixed << setprecision(0) << tinhLuong() << endl;
     }
 };
 
