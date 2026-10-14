@@ -77,10 +77,10 @@ public:
 };
 
 int main() {
-    People p1();
+    People p1;
     People p2("4923754925", "Dien Gia K", "HCM");
 
-    Student s1();
+    Student s1;
     Student s2("935898420", "Tran Thi Thu ha", "HCMC", "B12345", 2020);
 
     FIEstudents f1;
