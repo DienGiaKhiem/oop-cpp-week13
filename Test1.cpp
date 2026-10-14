@@ -4,26 +4,26 @@ using namespace std;
 
 class People {
 private:
-    string cccd;
+    string ID;
     string name;
     string address;
 
 public:
     People () {
-        cccd = "00000000000000";
+        ID = "00000000000000";
         name = "Unknown";
         address = "Unknown";
     }
     People(string c, string n, string a){
-        cccd = c;
+        ID = c;
         name = n;
         address = a;
     }
 
-    string getCCCD() const { return cccd; }
+    string getCCCD() const { return ID; }
     string getName() const { return name; }
     string getAddress() const { return address; }
-    void setCCCD(string c) { cccd = c; }
+    void setCCCD(string c) { ID = c; }
     void setName(string n) { name = n; }
     void setAddress(string a) { address = a; }
 };
@@ -81,7 +81,7 @@ int main() {
     People p2("4923754925", "Dien Gia K", "HCM");
 
     Student s1();
-    Student s2("34567890123456", "Nguyen Van C", "HCMC", "B12345", 2020);
+    Student s2("935898420", "Tran Thi Thu ha", "HCMC", "B12345", 2020);
 
     FIEstudents f1;
     FIEstudents f2("45678901234567", "Le Thi D", "Da Nang", "C67890", 2021, 90);
