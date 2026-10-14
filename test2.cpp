@@ -30,6 +30,12 @@ public:
     void setCCCD(string c) { cccd = c; }
     void setSDT(string p) { sdt = p; }
     void setAddress(string a) { address = a; }
+
+    void displayInfo() const {
+        cout << "CCCD: " << cccd << endl;
+        cout << "SDT: " << sdt << endl;
+        cout << "Address: " << address << endl;
+    }
 };
 
 class HourlyEmployee : public Employee {
@@ -54,6 +60,17 @@ public:
 
     void setSoGioLamViec(int g) { soGioLamViec = g; }
     void setDonGia(double dg) { donGia = dg; }
+
+    double tinhLuong() const {
+        return soGioLamViec * donGia;
+    }
+
+    void displayInfo() const {
+        Employee::displayInfo();
+        cout << "So gio lam viec: " << soGioLamViec << endl;
+        cout << "Don gia: " << donGia << endl;
+        cout << "Luong: " << tinhLuong() << endl;
+    }
 };
 
 class MonthlyEmployee : public Employee {
@@ -84,36 +101,37 @@ public:
     void setLuongCoBan(double lcb) { luongCoBan = lcb; }
     void setPhuCap(double pc) { phuCap = pc; }
     void setHeSoThuong(double hs) { heSoThuong = hs; }
+
+    double tinhLuong() const {
+        return luongCoBan + phuCap + (luongCoBan * heSoThuong);
+    }
+
+    void displayInfo() const {
+        Employee::displayInfo();
+        cout << "Luong co ban: " << luongCoBan << endl;
+        cout << "Phu cap: " << phuCap << endl;
+        cout << "He so thuong: " << heSoThuong << endl;
+        cout << "Luong: " << tinhLuong() << endl;
+    }
 };
 
 int main() {
     Employee e1;
 
-    HourlyEmployee h1("079111222333", "0912345678",
-                      "Can Tho", 160, 45000);
+    HourlyEmployee h1("079555666777", "0938123456",
+                      "Hue", 175, 45000);
 
-    MonthlyEmployee m1("079444555666", "0987654321",
-                       "Da Nang", 12000000, 1500000, 1.2);
+    MonthlyEmployee m1("079888999111", "0976234568",
+                       "Nha Trang", 14000000, 1800000, 0.5);
 
     cout << "--- Employee e1 ---" << endl;
-    cout << "CCCD: " << e1.getCCCD() << endl;
-    cout << "SDT: " << e1.getSDT() << endl;
-    cout << "Address: " << e1.getAddress() << endl << endl;
+    e1.displayInfo();
 
-    cout << "--- HourlyEmployee h1 ---" << endl;
-    cout << "CCCD: " << h1.getCCCD() << endl;
-    cout << "SDT: " << h1.getSDT() << endl;
-    cout << "Address: " << h1.getAddress() << endl;
-    cout << "So gio lam viec: " << h1.getSoGioLamViec() << endl;
-    cout << "Don gia: " << h1.getDonGia() << endl << endl;
+    cout << "\n--- HourlyEmployee h1 ---" << endl;
+    h1.displayInfo();
 
-    cout << "--- MonthlyEmployee m1 ---" << endl;
-    cout << "CCCD: " << m1.getCCCD() << endl;
-    cout << "SDT: " << m1.getSDT() << endl;
-    cout << "Address: " << m1.getAddress() << endl;
-    cout << "Luong co ban: " << m1.getLuongCoBan() << endl;
-    cout << "Phu cap: " << m1.getPhuCap() << endl;
-    cout << "He so thuong: " << m1.getHeSoThuong() << endl;
+    cout << "\n--- MonthlyEmployee m1 ---" << endl;
+    m1.displayInfo();
 
     return 0;
 }
